@@ -1,8 +1,10 @@
-from pdf import pdf_to_dict
+from pdf import PdfFile
+
+pf = PdfFile()
 
 
 def test_keys_presence(file='test_task'):
-    file_keys = pdf_to_dict(file).keys()
+    file_keys = pf.pdf_to_dict(file).keys()
 
     assert 'PN' in file_keys
     assert 'SN' in file_keys
